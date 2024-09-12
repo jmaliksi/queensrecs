@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A Brief Guide for Travelers Staying at the Ravel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("https://ik.imagekit.io/4waizx9and/newyorkcitay_cc0FmnyVP?updatedAt=1726177002764");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1em;
+            padding-right: 1em;
+            max-width: 40em;
+            font-family: "Noto Sans", sans-serif;
+            font-size: 1.2em;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Josefin Sans", sans-serif;
+        }
+        #container {
+            background-color: #fffc;
+            padding: .5em;
+        }
+        #map {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            height: 70vh;
+        }
+        li {
+            padding-bottom: .5em;
+        }
+    </style>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.js"></script>
+</head>
+<body>
+    <div id="container">
+    <h1>A Brief Guide for Travelers staying at the Ravel</h1>
+
+    <h2>Transit</h2>
+    <p>The Ravel is located in Long Island City, right under the Queensboro Bridge and across the East River from Manhattan. While the immediate area is mostly residential or old warehouses, it's actually very central with plenty of transit options in and around the city.</p>
+
+    <h3>Public Transit</h3>
+    <p>The subways and buses (MTA) are a flat rate of $2.90 and can all be paid using your smartphone or credit card's tap-to-pay right at the turnstiles, so you don't need to download an app ahead of time. If you don't want to use tap-to-pay, you can also buy and load MTA cards at any subway station. These will get you on any bus or train within Manhattan, Queens, and Brooklyn.</p>
+
+    <p>For planning a route, Google Maps will get you there easily enough. If you want more realtime schedule updates, I recommend the Transit or City Mapper app.</p>
+
+    <h4>Nearby Stations</h4>
+    <ul>
+        <li>21 St-Queensbridge (F) - The F train is the easiest way to get into Manhattan and to Times Square from the hotel.</li>
+        <li>46 Av/Vernon Blvd (Q103) - The Q103 is a local bus that goes north to Astoria and south to Hunters Point.</li>
+        <li>Court Sq (E 7 G) - The E takes you to Manhattan and One World Trade. The 7 gets you to Jackson Heights. The G gets you to Brooklyn.</li>
+    </ul>
+
+    <h3>Ferry</h3>
+    <p>NYC ferries cost $4.50 one way, with the closest routes to the hotel being the Astoria route and the East River route. Both pick up in Hunters Point and can take you down to north Brooklyn then over to downtown Manhattan. The Astoria route can also take you to/from Roosevelt Island.</p>
+
+    <h3>Citi Bike</h3>
+    <p>NYC has a bikeshare program with Citi which has bike docks dotted around the city. It's $4.95 to unlock a bike, with additional billing after 45 minutes of riding. You'll need the Citi Bike app to use these. There are several docks within a few blocks of the hotel.</p>
+
+    <h3>Taxi</h3>
+    <p>Yellow cabs can be hailed old school style, and Uber and Lyft operate within the city and can get you anywhere in a pinch (and probably for no less than $30 while stuck in traffic). I cannot stress enough how much you should avoid taxis if you are in and around midtown.</p>
+
+    <h2>Food and Drink</h2>
+    <p>There are too many food and drink options to list them all, and regardless, every place in New York is going to be decent at worst. Here are some broad strokes if you need an idea, though:</p>
+    <ul>
+        <li>If you're looking for a quick brunch near the hotel, take the Q103 or a citibike down Vernon Blvd. Below 46th is a cluster of bars and restaurants</li>
+        <li>If you're in midtown, don't bother with any of the restaurants there and instead walk a couple blocks west to Hell's Kitchen, or take a train further down to Lower East Side</li>
+        <li>The pinoys are all in Jackson Heights if you want filipino food</li>
+        <li>New Yorker have a lot of opinions about pizza and bagels. If you're just visiting, you ignore all of them; the best pizza is the one closest at hand and the best bagel is the one freshest from the oven.</li>
+    </ul>
+
+    <h2>Points of Interest</h2>
+
+    <h3>Museums</h3>
+    <ul>
+        <li>Fotografiska - chique photography exhibit</li>
+        <li>Guggenheim - museum with iconic architecture</li>
+        <li>Metropolitan Museum of Art - everyone talks about the Met because it's worth it every time</li>
+        <li>Neue Gallery - features Gustav Klimpts and also a cafe with excellent cake</li>
+        <li>Whitney Museum - cool contemporary art</li>
+    </ul>
+
+    <h3>Parks</h3>
+    <ul>
+        <li>Brooklyn Botanical Garden - botanical garden right next to Prospect Park if you need to get away from the hustle and bustle for a bit</li>
+        <li>Central Park - it's Central Park</li>
+        <li>Gantry Plaza Park - nice riverwalk park just south of the hotel</li>
+        <li>Highline - old raised train tracks converted into a walking park in Chelsea</li>
+        <li>Roosevelt Island - across the river from the hotel. Has a gondola to/from Manhattan and a ferry stop.</li>
+        <li>Times Square - it's Times Square</li>
+    </ul>
+
+    <div id="map"></div>
+    </div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoiam1hbGlrc2kzIiwiYSI6ImNtMHprZ21hNjA3NnkycXEyMTdsaWI1ZWIifQ.Yav0EaVaMmUPPg4a80014A';
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/jmaliksi3/cm0zki3wb00om01ntbezwa1gu',
+            //style: 'mapbox://styles/jmaliksi3/cm0zki3wb00om01ntbezwa1gu',
+            center: [-73.94910123220716, 40.75455994409249],
+            zoom: 12,
+        });
+        map.addControl(new mapboxgl.NavigationControl());
+        map.on('click', 'poi', (e) => {
+            if (window.confirm("Open in Google Maps?")) {
+                window.open(e.features[0].properties.gurl);
+            }
+        });
+    </script>
+
+</body>
+</html>
